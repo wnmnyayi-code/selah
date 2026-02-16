@@ -33,6 +33,14 @@ export function Hero() {
             size="lg"
             className="rounded-full px-8 text-base"
           >
+            <Link href="/browse">Browse Prayers</Link>
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            size="lg"
+            className="rounded-full px-8 text-base"
+          >
             <Link href="#how-it-works">How It Works</Link>
           </Button>
         </div>
