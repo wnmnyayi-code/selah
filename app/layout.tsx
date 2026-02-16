@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Lora, Inter } from 'next/font/google'
 
 import './globals.css'
+import { ScriptureBackground } from '@/components/scripture-background'
 
 const _lora = Lora({ subsets: ['latin'], variable: '--font-serif' })
 const _inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
@@ -26,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased relative min-h-screen">
+        <ScriptureBackground />
+        {children}
+      </body>
     </html>
   )
 }
